@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlayerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PlayerDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="PlayerDBModel.Admin" />
+    <EntitySet Name="Fixtures" EntityType="PlayerDBModel.Fixture" />
+    <EntitySet Name="Players" EntityType="PlayerDBModel.Player" />
+    <EntitySet Name="sysdiagrams" EntityType="PlayerDBModel.sysdiagram" />
+    <EntitySet Name="Teams" EntityType="PlayerDBModel.Team" />
+    <EntitySet Name="TeamPlayers" EntityType="PlayerDBModel.TeamPlayer" />
+    <EntitySet Name="Tournaments" EntityType="PlayerDBModel.Tournament" />
+    <EntitySet Name="TournamentTeams" EntityType="PlayerDBModel.TournamentTeam" />
+    <AssociationSet Name="FK_Fixture_Team" Association="PlayerDBModel.FK_Fixture_Team">
+      <End Role="Team" EntitySet="Teams" />
+      <End Role="Fixture" EntitySet="Fixtures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fixture_Team1" Association="PlayerDBModel.FK_Fixture_Team1">
+      <End Role="Team" EntitySet="Teams" />
+      <End Role="Fixture" EntitySet="Fixtures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fixture_Tournament" Association="PlayerDBModel.FK_Fixture_Tournament">
+      <End Role="Tournament" EntitySet="Tournaments" />
+      <End Role="Fixture" EntitySet="Fixtures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Player_Player" Association="PlayerDBModel.FK_Player_Player">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="Player1" EntitySet="Players" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamPlayer_Player" Association="PlayerDBModel.FK_TeamPlayer_Player">
+      <End Role="Player" EntitySet="Players" />
+      <End Role="TeamPlayer" EntitySet="TeamPlayers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamPlayer_Team" Association="PlayerDBModel.FK_TeamPlayer_Team">
+      <End Role="Team" EntitySet="Teams" />
+      <End Role="TeamPlayer" EntitySet="TeamPlayers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TournamentTeam_Tournament" Association="PlayerDBModel.FK_TournamentTeam_Tournament">
+      <End Role="Team" EntitySet="Teams" />
+      <End Role="TournamentTeam" EntitySet="TournamentTeams" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Fixture">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Team1ID" Type="Int32" Nullable="false" />
+    <Property Name="Team2ID" Type="Int32" Nullable="false" />
+    <Property Name="TournamentID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Team" Relationship="PlayerDBModel.FK_Fixture_Team" FromRole="Fixture" ToRole="Team" />
+    <NavigationProperty Name="Team1" Relationship="PlayerDBModel.FK_Fixture_Team1" FromRole="Fixture" ToRole="Team" />
+    <NavigationProperty Name="Tournament" Relationship="PlayerDBModel.FK_Fixture_Tournament" FromRole="Fixture" ToRole="Tournament" />
+  </EntityType>
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Role" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BattingStyle" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="BowlingStyle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Player1" Relationship="PlayerDBModel.FK_Player_Player" FromRole="Player" ToRole="Player1" />
+    <NavigationProperty Name="Player2" Relationship="PlayerDBModel.FK_Player_Player" FromRole="Player1" ToRole="Player" />
+    <NavigationProperty Name="TeamPlayers" Relationship="PlayerDBModel.FK_TeamPlayer_Player" FromRole="Player" ToRole="TeamPlayer" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamID" />
+    </Key>
+    <Property Name="TeamID" Type="Int32" Nullable="false" />
+    <Property Name="Team_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Fixtures" Relationship="PlayerDBModel.FK_Fixture_Team" FromRole="Team" ToRole="Fixture" />
+    <NavigationProperty Name="Fixtures1" Relationship="PlayerDBModel.FK_Fixture_Team1" FromRole="Team" ToRole="Fixture" />
+    <NavigationProperty Name="TeamPlayers" Relationship="PlayerDBModel.FK_TeamPlayer_Team" FromRole="Team" ToRole="TeamPlayer" />
+    <NavigationProperty Name="TournamentTeams" Relationship="PlayerDBModel.FK_TournamentTeam_Tournament" FromRole="Team" ToRole="TournamentTeam" />
+  </EntityType>
+  <EntityType Name="TeamPlayer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeamID" Type="Int32" Nullable="false" />
+    <Property Name="PlayerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Player" Relationship="PlayerDBModel.FK_TeamPlayer_Player" FromRole="TeamPlayer" ToRole="Player" />
+    <NavigationProperty Name="Team" Relationship="PlayerDBModel.FK_TeamPlayer_Team" FromRole="TeamPlayer" ToRole="Team" />
+  </EntityType>
+  <EntityType Name="Tournament">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tournament_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Venue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Fixtures" Relationship="PlayerDBModel.FK_Fixture_Tournament" FromRole="Tournament" ToRole="Fixture" />
+  </EntityType>
+  <EntityType Name="TournamentTeam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeamID" Type="Int32" Nullable="false" />
+    <Property Name="TournamentID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Team" Relationship="PlayerDBModel.FK_TournamentTeam_Tournament" FromRole="TournamentTeam" ToRole="Team" />
+  </EntityType>
+  <Association Name="FK_Fixture_Team">
+    <End Type="PlayerDBModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="PlayerDBModel.Fixture" Role="Fixture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamID" />
+      </Principal>
+      <Dependent Role="Fixture">
+        <PropertyRef Name="Team1ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fixture_Team1">
+    <End Type="PlayerDBModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="PlayerDBModel.Fixture" Role="Fixture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamID" />
+      </Principal>
+      <Dependent Role="Fixture">
+        <PropertyRef Name="Team2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fixture_Tournament">
+    <End Type="PlayerDBModel.Tournament" Role="Tournament" Multiplicity="1" />
+    <End Type="PlayerDBModel.Fixture" Role="Fixture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tournament">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Fixture">
+        <PropertyRef Name="TournamentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Player_Player">
+    <End Type="PlayerDBModel.Player" Role="Player" Multiplicity="1" />
+    <End Type="PlayerDBModel.Player" Role="Player1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="PId" />
+      </Principal>
+      <Dependent Role="Player1">
+        <PropertyRef Name="PId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamPlayer_Player">
+    <End Type="PlayerDBModel.Player" Role="Player" Multiplicity="1" />
+    <End Type="PlayerDBModel.TeamPlayer" Role="TeamPlayer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="PId" />
+      </Principal>
+      <Dependent Role="TeamPlayer">
+        <PropertyRef Name="PlayerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamPlayer_Team">
+    <End Type="PlayerDBModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="PlayerDBModel.TeamPlayer" Role="TeamPlayer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamID" />
+      </Principal>
+      <Dependent Role="TeamPlayer">
+        <PropertyRef Name="TeamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TournamentTeam_Tournament">
+    <End Type="PlayerDBModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="PlayerDBModel.TournamentTeam" Role="TournamentTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamID" />
+      </Principal>
+      <Dependent Role="TournamentTeam">
+        <PropertyRef Name="TeamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

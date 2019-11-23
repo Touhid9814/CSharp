@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PlayerDBModelStoreContainer" CdmEntityContainer="PlayerDBEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="PlayerDBModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fixtures">
+      <EntityTypeMapping TypeName="PlayerDBModel.Fixture">
+        <MappingFragment StoreEntitySet="Fixture">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="TournamentID" ColumnName="TournamentID" />
+          <ScalarProperty Name="Team2ID" ColumnName="Team2ID" />
+          <ScalarProperty Name="Team1ID" ColumnName="Team1ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="PlayerDBModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="BowlingStyle" ColumnName="BowlingStyle" />
+          <ScalarProperty Name="BattingStyle" ColumnName="BattingStyle" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PlayerDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="PlayerDBModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="Team_Name" ColumnName="Team Name" />
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamPlayers">
+      <EntityTypeMapping TypeName="PlayerDBModel.TeamPlayer">
+        <MappingFragment StoreEntitySet="TeamPlayer">
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tournaments">
+      <EntityTypeMapping TypeName="PlayerDBModel.Tournament">
+        <MappingFragment StoreEntitySet="Tournament">
+          <ScalarProperty Name="Venue" ColumnName="Venue" />
+          <ScalarProperty Name="Tournament_Name" ColumnName="Tournament Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TournamentTeams">
+      <EntityTypeMapping TypeName="PlayerDBModel.TournamentTeam">
+        <MappingFragment StoreEntitySet="TournamentTeam">
+          <ScalarProperty Name="TournamentID" ColumnName="TournamentID" />
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

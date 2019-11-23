@@ -1,0 +1,27 @@
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\BusinessLogic.dll
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\BusinessLogic.pdb
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\Data.dll
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\EntityFramework.dll
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\FrameWork.dll
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\Data.pdb
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\Data.dll.config
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\FrameWork.pdb
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\bin\Debug\EntityFramework.xml
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.dll
+c:\users\user\source\repos\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.pdb
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\BusinessLogic.dll
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\BusinessLogic.pdb
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\Data.dll
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\EntityFramework.dll
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\FrameWork.dll
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\Data.pdb
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\Data.dll.config
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\FrameWork.pdb
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\bin\Debug\EntityFramework.xml
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.dll
+F:\5th Semester\C#\Cricket Club Management\BusinessLogic\obj\Debug\BusinessLogic.pdb

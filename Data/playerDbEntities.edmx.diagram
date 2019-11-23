@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4657f5014b9b4a1798348eedcd6fec60" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="PlayerDBModel.Admin" Width="1.5" PointX="5.75" PointY="1.75" />
+        <EntityTypeShape EntityType="PlayerDBModel.Fixture" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="PlayerDBModel.Player" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PlayerDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PlayerDBModel.Team" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="PlayerDBModel.TeamPlayer" Width="1.5" PointX="3" PointY="2.125" />
+        <EntityTypeShape EntityType="PlayerDBModel.Tournament" Width="1.5" PointX="0.75" PointY="8.25" />
+        <EntityTypeShape EntityType="PlayerDBModel.TournamentTeam" Width="1.5" PointX="3" PointY="11.25" />
+        <AssociationConnector Association="PlayerDBModel.FK_Fixture_Team" />
+        <AssociationConnector Association="PlayerDBModel.FK_Fixture_Team1" />
+        <AssociationConnector Association="PlayerDBModel.FK_Fixture_Tournament" />
+        <AssociationConnector Association="PlayerDBModel.FK_Player_Player" />
+        <AssociationConnector Association="PlayerDBModel.FK_TeamPlayer_Player" />
+        <AssociationConnector Association="PlayerDBModel.FK_TeamPlayer_Team" />
+        <AssociationConnector Association="PlayerDBModel.FK_TournamentTeam_Tournament" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

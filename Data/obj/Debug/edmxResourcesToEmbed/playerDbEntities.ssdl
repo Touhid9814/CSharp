@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PlayerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOB" Type="datetime" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fixture">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Team1ID" Type="int" Nullable="false" />
+    <Property Name="Team2ID" Type="int" Nullable="false" />
+    <Property Name="TournamentID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Player">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOB" Type="datetime" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BattingStyle" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="BowlingStyle" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamID" />
+    </Key>
+    <Property Name="TeamID" Type="int" Nullable="false" />
+    <Property Name="Team Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeamPlayer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeamID" Type="int" Nullable="false" />
+    <Property Name="PlayerID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tournament">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tournament Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Venue" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TournamentTeam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeamID" Type="int" Nullable="false" />
+    <Property Name="TournamentID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Fixture_Team">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="Fixture" Type="Self.Fixture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamID" />
+      </Principal>
+      <Dependent Role="Fixture">
+        <PropertyRef Name="Team1ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fixture_Team1">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="Fixture" Type="Self.Fixture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamID" />
+      </Principal>
+      <Dependent Role="Fixture">
+        <PropertyRef Name="Team2ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fixture_Tournament">
+    <End Role="Tournament" Type="Self.Tournament" Multiplicity="1" />
+    <End Role="Fixture" Type="Self.Fixture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tournament">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Fixture">
+        <PropertyRef Name="TournamentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Player_Player">
+    <End Role="Player" Type="Self.Player" Multiplicity="1" />
+    <End Role="Player1" Type="Self.Player" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="PId" />
+      </Principal>
+      <Dependent Role="Player1">
+        <PropertyRef Name="PId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamPlayer_Player">
+    <End Role="Player" Type="Self.Player" Multiplicity="1" />
+    <End Role="TeamPlayer" Type="Self.TeamPlayer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Player">
+        <PropertyRef Name="PId" />
+      </Principal>
+      <Dependent Role="TeamPlayer">
+        <PropertyRef Name="PlayerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamPlayer_Team">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="TeamPlayer" Type="Self.TeamPlayer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamID" />
+      </Principal>
+      <Dependent Role="TeamPlayer">
+        <PropertyRef Name="TeamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TournamentTeam_Tournament">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="TournamentTeam" Type="Self.TournamentTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamID" />
+      </Principal>
+      <Dependent Role="TournamentTeam">
+        <PropertyRef Name="TeamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PlayerDBModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fixture" EntityType="Self.Fixture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeamPlayer" EntityType="Self.TeamPlayer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tournament" EntityType="Self.Tournament" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TournamentTeam" EntityType="Self.TournamentTeam" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Fixture_Team" Association="Self.FK_Fixture_Team">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="Fixture" EntitySet="Fixture" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fixture_Team1" Association="Self.FK_Fixture_Team1">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="Fixture" EntitySet="Fixture" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fixture_Tournament" Association="Self.FK_Fixture_Tournament">
+      <End Role="Tournament" EntitySet="Tournament" />
+      <End Role="Fixture" EntitySet="Fixture" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Player_Player" Association="Self.FK_Player_Player">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="Player1" EntitySet="Player" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamPlayer_Player" Association="Self.FK_TeamPlayer_Player">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="TeamPlayer" EntitySet="TeamPlayer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamPlayer_Team" Association="Self.FK_TeamPlayer_Team">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamPlayer" EntitySet="TeamPlayer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TournamentTeam_Tournament" Association="Self.FK_TournamentTeam_Tournament">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TournamentTeam" EntitySet="TournamentTeam" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

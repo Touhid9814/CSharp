@@ -1,0 +1,61 @@
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.exe.config
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.exe
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.pdb
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\BusinessLogic.dll
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Data.dll
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\FrameWork.dll
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.Design.dll
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.dll
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\BusinessLogic.pdb
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Data.pdb
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Data.dll.config
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\FrameWork.pdb
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\EntityFramework.xml
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Sports Management.csprojResolveAssemblyReference.cache
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Admin.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.FixtureForm.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Form1.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.PlayerInfoForm.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Properties.Resources.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.TeamForm.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.TournamentForm.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Sports Management.csproj.GenerateResource.Cache
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Sports Management.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.exe
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.pdb
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.PlayerSelection.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.TeamSelection.resources
+C:\Users\User\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.AddAdmin.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Sports Management.csprojResolveAssemblyReference.cache
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.AddAdmin.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Admin.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.FixtureForm.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Form1.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.PlayerInfoForm.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.PlayerSelection.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Properties.Resources.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.TeamForm.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.TeamSelection.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.TournamentForm.resources
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Sports Management.csproj.GenerateResource.cache
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Sports Management.csproj.CoreCompileInputs.cache
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.exe
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.pdb
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.exe.config
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.exe
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.pdb
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\BusinessLogic.dll
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\Data.dll
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\EntityFramework.dll
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\FrameWork.dll
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.Design.dll
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.dll
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.Fonts.dll
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\BusinessLogic.pdb
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\Data.pdb
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\Data.dll.config
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\FrameWork.pdb
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\bin\Debug\EntityFramework.xml
+F:\5th Semester\C#\Cricket Club Management\Cricket Club Management\obj\Debug\Sports Management.csproj.CopyComplete

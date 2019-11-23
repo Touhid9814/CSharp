@@ -1,0 +1,18 @@
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.exe.config
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.exe
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\Cricket Club Management.pdb
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.Design.dll
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.dll
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\bin\Debug\MetroFramework.Fonts.dll
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.csprojResolveAssemblyReference.cache
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Form1.resources
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Properties.Resources.resources
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.csproj.GenerateResource.Cache
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.csproj.CoreCompileInputs.cache
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.exe
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket Club Management.pdb
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.Admin.resources
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.PlayerInfoForm.resources
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.TeamForm.resources
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.TournamentForm.resources
+c:\users\user\source\repos\Cricket Club Management\Cricket Club Management\obj\Debug\Cricket_Club_Management.FixtureForm.resources
